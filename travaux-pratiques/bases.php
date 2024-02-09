@@ -150,7 +150,20 @@
             <i class="bi bi-filetype-exe fs-2 text-warning text-bold"></i>
             <div class="bg-black rounded-4 p-3 flex-fill">
                 <!-- Votre code -->
-
+                <?php foreach ($comptes as $compte) : ?>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body border border-1">
+                            <h5><?= $compte["prenom"] ?> <?= $compte["nom"] ?></h5>
+                            <p><?= $compte["email"] ?></p>
+                            <p><?= $compte["premium"] ? "Premium" : "Non premium" ?></p>
+                            <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                            <button class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
+                            <?php if ($compte["premium"] == false) : ?>
+                                <button class="btn btn-success"><i class="bi bi-currency-euro"></i></button>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
