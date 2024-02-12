@@ -151,8 +151,8 @@
             <div class="bg-black rounded-4 p-3 flex-fill">
                 <!-- Votre code -->
                 <?php foreach ($comptes as $compte) : ?>
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body border border-1">
+                    <div class="card border-dark mb-3" style="width: 18rem;">
+                        <div class="card-body">
                             <h5><?= $compte["prenom"] ?> <?= $compte["nom"] ?></h5>
                             <p><?= $compte["email"] ?></p>
                             <p><?= $compte["premium"] ? "Premium" : "Non premium" ?></p>
