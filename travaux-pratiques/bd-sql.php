@@ -13,13 +13,10 @@ $requete = $pdo->prepare("SELECT * FROM etudiant");
 // 3. Exécution de la requête
 $requete->execute();
 
-// Récupération des enregistrements
+// 4. Récupération des enregistrements
 // 1 enregistrement = 1 tableau associatif
 $etudiant = $requete->fetchAll(PDO::FETCH_ASSOC);
 ?>
-<pre>
-    <?php print_r($etudiant) ?>
-</pre>
 
 <!doctype html>
 <html lang="en">
